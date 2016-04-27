@@ -11,6 +11,8 @@ Plugin 'weynhamz/vim-plugin-minibufexpl'
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mileszs/ack.vim'
+
 
 
 "Languages
@@ -76,6 +78,11 @@ let g:pymode_folding = 0
 
 
 autocmd FileType python setlocal completeopt-=preview
+
+"""Refactoring
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
 
 """Completions
 autocmd Filetype *
