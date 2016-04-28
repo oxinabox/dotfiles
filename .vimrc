@@ -6,7 +6,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'https://github.com/ervandew/supertab'
 Plugin 'godlygeek/tabular'
-Plugin 'weynhamz/vim-plugin-minibufexpl'
 
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
