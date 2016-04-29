@@ -4,7 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'https://github.com/ervandew/supertab'
+"#Plugin 'https://github.com/ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 
 Plugin 'ingo-library'
@@ -23,7 +24,6 @@ Plugin 'JuliaLang/julia-vim'
 "Python
 Plugin 'hdima/python-syntax'
 Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
 
 "Colors
 Plugin 'mtglsk/wikipedia.vim'
@@ -84,13 +84,15 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 """Completions
-autocmd Filetype *
-	\	if &omnifunc == "" | 
-	\		setlocal omnifunc=syntaxcomplete#Complete |
-	\		call SuperTabChain(&omnifunc, "<c-p>") |
-	\		call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-	\	endif 
-
+"autocmd Filetype *
+"	\	if &omnifunc == "" | 
+"	\		setlocal omnifunc=syntaxcomplete#Complete |
+"	\		call SuperTabChain(&omnifunc, "<c-p>") |
+"	\		call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+"	\	endif 
+"
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
