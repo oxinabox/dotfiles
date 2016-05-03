@@ -1,24 +1,27 @@
 set nocompatible
+let $BASH_ENV = "~/.bash_aliases"
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-"#Plugin 'https://github.com/ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'godlygeek/tabular'
 
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
 
-
+Plugin 'benekastah/neomake'
 
 "Languages
 Plugin 'plasticboy/vim-markdown'
 Plugin 'octave.vim'
+
+
+"Julia
 Plugin 'JuliaLang/julia-vim'
+"Plugin 'zyedidia/julialint.vim'
 
 
 "Python
@@ -39,7 +42,6 @@ augroup filetypedetect
 augroup END
 " if octave-infowas installed ith would work
 "autocmd FileType matlab setlocal keywordprg=info\ octave\ --vi-keys\ --index-search
-
 
 
 "Misc Language Plugin Conf
@@ -93,6 +95,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
+let g:ycm_seed_identifiers_with_syntax = 1
+
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
@@ -103,6 +107,9 @@ inoremap <S-Insert> <Insert>
 
 "Interfacing
 set mouse=a
+
+"Commands
+command SortCSL call setline('.', join(sort(split(getline('.'), ', ')), ", "))
 
 "Appearence
 syntax enable
