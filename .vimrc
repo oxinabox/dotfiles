@@ -5,8 +5,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/deoplete.nvim'
+
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Shougo/deoplete.nvim'
 
 
 Plugin 'ingo-library'
@@ -15,8 +16,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'majutsushi/tagbar'
-
+Plugin 'taglist.vim'
 
 Plugin 'benekastah/neomake'
 
@@ -57,8 +57,20 @@ let g:vim_markdown_folding_disabled=1
 "Julia
 let g:default_julia_version = "devel"
 autocmd FileType julia   
-	\	let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') |
-"	\	let g:ycm_collect_identifiers_from_tags_files = 1 
+	\	let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
+	
+"let g:tagbar_type_julia = {
+"	\'ctagbin': 'jltags',
+"	\ 'kinds' : [
+"		\'p:module',      
+"		\'v:variable',
+"		\'f:function',   
+"		\'s:datatype',
+"		\'u:union',      
+"		\'v:type'
+"	\]
+"\}
+
 
 
 
@@ -93,13 +105,27 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "	\	endif 
 "
 
-"let g:ycm_python_binary_path = '/usr/bin/python3'
-"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
-"let g:ycm_seed_identifiers_with_syntax = 1
-let g:deoplete#enable_at_startup = 1
-"let g:deoplete#sources = ['buffer','tag','omni','file']
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#sources = {}
+"let g:deoplete#sources._ = []
+"
+"inoremap <silent><expr> <Tab>
+"		\ pumvisible() ? "\<C-n>" :
+"		\ deoplete#mappings#manual_complete()
+"
+"function g:Multiple_cursors_before()
+"	let g:deoplete#disable_auto_complete = 1
+"endfunction
+"function g:Multiple_cursors_after()
+"	let g:deoplete#disable_auto_complete = 0
+"endfunction
+"
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
