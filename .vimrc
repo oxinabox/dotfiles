@@ -5,12 +5,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/deoplete.nvim'
+
 
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
+Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'majutsushi/tagbar'
+
 
 Plugin 'benekastah/neomake'
 
@@ -46,22 +52,17 @@ augroup END
 
 "Misc Language Plugin Conf
 let g:vim_markdown_folding_disabled=1
+
+
+"Julia
 let g:default_julia_version = "devel"
+autocmd FileType julia   
+	\	let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') |
+"	\	let g:ycm_collect_identifiers_from_tags_files = 1 
+
 
 
 " Python-mode
-" Keys:
-" K             Show python docs
-" <Ctrl-Space>  Rope autocomplete
-" <Ctrl-c>g     Rope goto definition
-" <Ctrl-c>d     Rope show documentation
-" <Ctrl-c>f     Rope find occurrences
-" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 0
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 let g:pymode_lint = 0
@@ -76,8 +77,6 @@ let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
-
-
 autocmd FileType python setlocal completeopt-=preview
 
 """Refactoring
@@ -93,9 +92,13 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "	\		call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
 "	\	endif 
 "
-let g:ycm_python_binary_path = '/usr/bin/python3'
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
-let g:ycm_seed_identifiers_with_syntax = 1
+
+"let g:ycm_python_binary_path = '/usr/bin/python3'
+"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
+"let g:ycm_seed_identifiers_with_syntax = 1
+let g:deoplete#enable_at_startup = 1
+"let g:deoplete#sources = ['buffer','tag','omni','file']
+
 
 
 "Key (re) Bindings
@@ -104,12 +107,12 @@ map <F5> :setlocal spell! spelllang=en_us<CR>
 imap <Insert> <Nop>
 inoremap <S-Insert> <Insert>
 
+"Commands
+command SortCSL call setline('.', join(sort(split(getline('.'), ', ')), ", "))
 
 "Interfacing
 set mouse=a
 
-"Commands
-command SortCSL call setline('.', join(sort(split(getline('.'), ', ')), ", "))
 
 "Appearence
 syntax enable
