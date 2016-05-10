@@ -6,9 +6,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'Shougo/deoplete.nvim'
-
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/deoplete.nvim'
 
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
@@ -56,8 +55,7 @@ let g:vim_markdown_folding_disabled=1
 
 "Julia
 let g:default_julia_version = "devel"
-autocmd FileType julia   
-	\	let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
+autocmd FileType julia  let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
 	
 "let g:tagbar_type_julia = {
 "	\'ctagbin': 'jltags',
@@ -105,27 +103,27 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "	\	endif 
 "
 
-let g:ycm_python_binary_path = '/usr/bin/python3'
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_python_binary_path = '/usr/bin/python3'
+"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
+"let g:ycm_seed_identifiers_with_syntax = 1
+"let g:ycm_collect_identifiers_from_tags_files = 1
 
 
-"let g:deoplete#enable_at_startup = 1
-"let g:deoplete#sources = {}
-"let g:deoplete#sources._ = []
-"
-"inoremap <silent><expr> <Tab>
-"		\ pumvisible() ? "\<C-n>" :
-"		\ deoplete#mappings#manual_complete()
-"
-"function g:Multiple_cursors_before()
-"	let g:deoplete#disable_auto_complete = 1
-"endfunction
-"function g:Multiple_cursors_after()
-"	let g:deoplete#disable_auto_complete = 0
-"endfunction
-"
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {}
+let g:deoplete#sources._ = ['desctag','buffer','members','dictionary','omni','file']
+
+let g:deoplete#tag#cache_limit_size = 5000000
+"100x the default. cos Base along is 90k
+
+
+function g:Multiple_cursors_before()
+	let g:deoplete#disable_auto_complete = 1
+endfunction
+function g:Multiple_cursors_after()
+	let g:deoplete#disable_auto_complete = 0
+endfunction
+
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
