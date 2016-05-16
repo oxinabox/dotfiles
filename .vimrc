@@ -36,6 +36,8 @@ Plugin 'klen/python-mode'
 "Colors
 Plugin 'mtglsk/wikipedia.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'nielsmadan/harlequin'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -111,10 +113,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['desctag','buffer','member','dictionary','omni','file']
-
-let g:deoplete#tag#cache_limit_size = 5000000
-"100x the default. cos Base along is 90k
+let g:deoplete#sources._ =[]
+let g:deoplete#sources.jl=['jltag','buffer','member','dictionary','omni','file']
 
 
 function g:Multiple_cursors_before()
@@ -140,9 +140,17 @@ set mouse=a
 
 "Appearence
 syntax enable
-set background=dark
-colorscheme solarized
+
+if localtime()%2==0
+	colorscheme zellner
+elseif localtime()%2==1
+	colorscheme harlequin 
+	highlight Visual term=reverse cterm=reverse ctermbg=Grey
+end
+
 set number
+highlight LineNr ctermfg=green
+
 
 "Indenting
 set tabstop=4
