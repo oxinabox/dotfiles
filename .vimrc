@@ -111,7 +111,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['desctag','buffer','members','dictionary','omni','file']
+let g:deoplete#sources._ = ['desctag','buffer','member','dictionary','omni','file']
 
 let g:deoplete#tag#cache_limit_size = 5000000
 "100x the default. cos Base along is 90k
@@ -142,6 +142,7 @@ set mouse=a
 syntax enable
 set background=dark
 colorscheme solarized
+set number
 
 "Indenting
 set tabstop=4
