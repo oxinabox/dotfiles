@@ -112,6 +112,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {}
 let g:deoplete#sources._ = ['jltag','buffer','member','dictionary','omni','file']
 
 let g:deoplete#tag#cache_limit_size = 5000000
@@ -145,8 +146,8 @@ syntax enable
 if localtime()%2==0
 	colorscheme zellner
 elseif localtime()%2==1
-	colorscheme harlequin 
-	highlight Visual term=reverse cterm=reverse ctermbg=Grey
+	"colorscheme harlequin 
+	"highlight Visual term=reverse cterm=reverse ctermbg=Grey
 end
 
 set number
