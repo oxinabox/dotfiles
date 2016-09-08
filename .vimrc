@@ -38,6 +38,8 @@ Plugin 'klen/python-mode'
 "Colors
 Plugin 'mtglsk/wikipedia.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'nielsmadan/harlequin'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -57,7 +59,7 @@ let g:vim_markdown_folding_disabled=1
 
 "Julia
 let g:default_julia_version = "devel"
-autocmd FileType julia  let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
+"autocmd FileType julia  let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
 	
 "let g:tagbar_type_julia = {
 "	\'ctagbin': 'jltags',
@@ -113,10 +115,10 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['desctag','buffer','member','dictionary','omni','file']
+let g:deoplete#sources._ = ['jltag','buffer','member','dictionary','omni','file']
 
 let g:deoplete#tag#cache_limit_size = 5000000
-"100x the default. cos Base along is 90k
+"100x the default. cos Julia's Base libnrary alone is 90k
 
 
 function g:Multiple_cursors_before()
@@ -147,9 +149,17 @@ set mouse=a
 
 "Appearence
 syntax enable
-set background=dark
-colorscheme solarized
+
+if localtime()%2==0
+	colorscheme zellner
+elseif localtime()%2==1
+	"colorscheme harlequin 
+	"highlight Visual term=reverse cterm=reverse ctermbg=Grey
+end
+
 set number
+highlight LineNr ctermfg=green
+
 
 "Indenting
 set tabstop=4
