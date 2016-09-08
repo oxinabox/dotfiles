@@ -14,6 +14,8 @@ Plugin 'SpellCheck'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ntpeters/vim-better-whitespace'
+
 
 Plugin 'taglist.vim'
 
@@ -133,6 +135,11 @@ inoremap <S-Insert> <Insert>
 
 "Commands
 command SortCSL call setline('.', join(sort(split(getline('.'), ', ')), ", "))
+
+command! -bang -range -nargs=1 -complete=file MoveWrite  <line1>,<line2>write<bang> <args> | <line1>,<line2>delete _
+command! -bang -range -nargs=1 -complete=file MoveAppend <line1>,<line2>write<bang> >> <args> | <line1>,<line2>delete _
+
+command! -bang -range -nargs=1 -complete=file ExtractToFile  <line1>,<line2>write<bang> <args> | <line1>,<line2>delete _ | :normal iinclude("<args>")<CR><ESC>
 
 "Interfacing
 set mouse=a
