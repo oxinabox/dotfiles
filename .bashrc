@@ -60,7 +60,9 @@ if ! shopt -oq posix; then
 fi
 
 
-TMPDIR=/dev/shm
+export TMPDIR=/dev/shm
+
+export EDITOR="vim"
 
 ##############################################Tools
 
