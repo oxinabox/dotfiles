@@ -6,8 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'zchee/deoplete-jedi'
+Plugin 'JuliaEditorSupport/deoplete-julia'
+
 
 Plugin 'ingo-library'
 Plugin 'SpellCheck'
@@ -59,20 +61,6 @@ let g:vim_markdown_folding_disabled=1
 
 "Julia
 let g:default_julia_version = "devel"
-"autocmd FileType julia  let &tags = fnamemodify(expand('%'),':t:s#^#.#:s#$#.tags#') 
-	
-"let g:tagbar_type_julia = {
-"	\'ctagbin': 'jltags',
-"	\ 'kinds' : [
-"		\'p:module',      
-"		\'v:variable',
-"		\'f:function',   
-"		\'s:datatype',
-"		\'u:union',      
-"		\'v:type'
-"	\]
-"\}
-
 
 
 
@@ -99,26 +87,13 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 """Completions
-"autocmd Filetype *
-"	\	if &omnifunc == "" | 
-"	\		setlocal omnifunc=syntaxcomplete#Complete |
-"	\		call SuperTabChain(&omnifunc, "<c-p>") |
-"	\		call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-"	\	endif 
-"
-
-"let g:ycm_python_binary_path = '/usr/bin/python3'
-"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>','Enter']
-"let g:ycm_seed_identifiers_with_syntax = 1
-"let g:ycm_collect_identifiers_from_tags_files = 1
-
-
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['jltag','buffer','member','dictionary','omni','file']
+"let g:deoplete#sources = {}
+"let g:deoplete#sources.julia = ['julia','buffer','member','dictionary','omni','file']
+
+"call deoplete#enable_logging('DEBUG', 'deoplete.log')
 
 let g:deoplete#tag#cache_limit_size = 5000000
-"100x the default. cos Julia's Base libnrary alone is 90k
 
 
 function g:Multiple_cursors_before()
@@ -153,8 +128,8 @@ syntax enable
 if localtime()%2==0
 	colorscheme zellner
 elseif localtime()%2==1
-	"colorscheme harlequin 
-	"highlight Visual term=reverse cterm=reverse ctermbg=Grey
+	colorscheme harlequin 
+	highlight Visual term=reverse cterm=reverse ctermbg=Grey
 end
 
 set number
