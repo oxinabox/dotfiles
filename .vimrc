@@ -19,8 +19,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 
 
-Plugin 'taglist.vim'
-
 Plugin 'benekastah/neomake'
 
 "Languages
