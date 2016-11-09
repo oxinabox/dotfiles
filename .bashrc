@@ -107,10 +107,12 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 
 
+####julia
+export PATH=~/.local/julia-0.5/bin:$PATH
+###venv
+
+source ~/.local/venvs/venv_p3/bin/activate
 
 ####junest
 export PATH=~/.local/share/junest/bin:$PATH
 
-###venv
-
-source ~/.local/venvs/venv_p3/bin/activate

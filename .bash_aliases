@@ -2,7 +2,6 @@ shopt -s expand_aliases
 
 
 alias julia="julia --color=yes"
-alias julia="julia-stable --color=yes"
 alias julia_test="julia --depwarn=no"
 alias julia_prod="julia --depwarn=no --optimize=3"
 
