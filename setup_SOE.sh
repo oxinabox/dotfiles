@@ -1,4 +1,6 @@
 sudo apt-get install tmux htop  mmv
+sudo apt-get install git cmake build-essential libgcrypt11-dev libyajl-dev libboost-all-dev libcurl4-openssl-dev libexpat1-dev libcppunit-dev binutils-dev libssl-dev pkg-config tool
+
 
 #Neovim
 sudo apt-get install software-properties-common
@@ -16,3 +18,9 @@ sudo apt-get update
 sudo apt-get install r-base
 
 
+R -e 'install.packages("devtools")'
+
+
+
+sudo -H pip install jupyter
+sudo apt-get install libzmq3-dev hdf5-tools

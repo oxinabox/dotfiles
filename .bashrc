@@ -62,7 +62,7 @@ fi
 
 export TMPDIR=/dev/shm
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 ##############################################Tools
 
@@ -107,5 +107,5 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 
 
 ####MISC PROGS
-source ~/build/git-subrepo/.rc
+#source ~/build/git-subrepo/.rc
 
