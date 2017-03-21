@@ -59,7 +59,7 @@ let g:vim_markdown_folding_disabled=1
 
 "Julia
 let g:default_julia_version = "devel"
-
+au FileType julia set ts=4 sw=4 sts=4 et
 
 
 " Python-mode
