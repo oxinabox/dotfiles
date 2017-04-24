@@ -8,7 +8,10 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'zchee/deoplete-jedi'
-Plugin 'JuliaEditorSupport/deoplete-julia'
+"Plugin 'JuliaEditorSupport/deoplete-julia'
+
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
 
 
 Plugin 'ingo-library'
@@ -94,6 +97,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#tag#cache_limit_size = 5000000
 
 
+
 function g:Multiple_cursors_before()
 	let g:deoplete#disable_auto_complete = 1
 endfunction
@@ -138,6 +142,6 @@ highlight LineNr ctermfg=green
 set tabstop=4
 set softtabstop=4 
 set shiftwidth=4 
-set noexpandtab 
+set expandtab
 
 

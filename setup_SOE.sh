@@ -1,5 +1,5 @@
 sudo apt-get install tmux htop  mmv
-sudo apt-get install git cmake build-essential libgcrypt11-dev libyajl-dev libboost-all-dev libcurl4-openssl-dev libexpat1-dev libcppunit-dev binutils-dev libssl-dev pkg-config-tool clang
+sudo apt-get install git cmake build-essential libgcrypt11-dev libyajl-dev libboost-all-dev libcurl4-openssl-dev libexpat1-dev libcppunit-dev binutils-dev libssl-dev pkg-config-tool clang libgtk-3-0
 
 
 #Neovim

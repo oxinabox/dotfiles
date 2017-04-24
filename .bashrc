@@ -60,9 +60,14 @@ if ! shopt -oq posix; then
 fi
 
 
-export TMPDIR=/dev/shm
+
 
 export EDITOR="nvim"
+
+export TMPDIR=/dev/shm
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
+
+source ~/openrc.sh
 
 ##############################################Tools
 
