@@ -8,7 +8,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'zchee/deoplete-jedi'
-Plugin 'JuliaEditorSupport/deoplete-julia'
+
+Plugin 'autozimu/LanguageClient-neovim'
 
 
 Plugin 'ingo-library'
@@ -27,7 +28,7 @@ Plugin 'octave.vim'
 
 
 "Julia
-Plugin 'JuliaLang/julia-vim'
+"Plugin 'JuliaLang/julia-vim'
 "Plugin 'zyedidia/julialint.vim'
 
 
