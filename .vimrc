@@ -6,9 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-jedi'
-Plugin 'JuliaEditorSupport/deoplete-julia'
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'zchee/deoplete-jedi'
+
+Plugin 'autozimu/LanguageClient-neovim'
 
 
 Plugin 'ingo-library'
