@@ -109,5 +109,3 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 ####MISC PROGS
 #source ~/build/git-subrepo/.rc
 
-alias julia='/home/wheel/oxinabox/juliavm/dists/0.3.2/bin/julia'
-alias juliavm='/home/wheel/oxinabox/.juliavm/juliavm'
