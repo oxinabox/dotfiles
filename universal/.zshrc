@@ -9,9 +9,9 @@ setopt histignorealldups sharehistory
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
 # use ramdrive for tmp
@@ -26,7 +26,6 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -41,15 +40,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 ##############
 
-#enable git subrepo
-source ~/Programs/git-subrepo/.rc
-
-alias julia-stable="~/Programs/julia-stable/bin/julia"
-#Start Fish, if we can...
-
 alias LS=ls
 
-if [ -x /usr/bin/fish ] ; then
-    exec /usr/bin/fish
+# Run fish if can
+if type fish > /dev/null; then
+    exec fish
 fi
 
