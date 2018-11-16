@@ -1,0 +1,9 @@
+[user]
+	email = lyndon.white@invenialabs.co.uk
+	name = Lyndon White
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[url "git@gitlab.invenia.ca:"]
+    insteadOf = https://gitlab.invenia.ca/
+
