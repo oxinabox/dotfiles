@@ -14,9 +14,6 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
-# use ramdrive for tmp
-export TMPDIR=/run/shm
-
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -47,4 +44,7 @@ alias vim=nvim
 if type fish > /dev/null; then
     exec fish
 fi
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

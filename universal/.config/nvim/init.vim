@@ -7,8 +7,6 @@ Plug 'ntpeters/vim-better-whitespace'
 
 "Languages
 Plug 'plasticboy/vim-markdown'
-
-"Julia
 Plug 'JuliaLang/julia-vim'
 
 "Colors
@@ -17,10 +15,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nielsmadan/harlequin'
 
 "Completion
-Plug 'zxqfl/tabnine-vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 call plug#end()
-
 
 
 "Misc Language Plugin Conf
@@ -31,6 +29,9 @@ let g:vim_markdown_folding_disabled=1
 let g:default_julia_version = "devel"
 au FileType julia set ts=4 sw=4 sts=4 et
 
+	
+"Completions
+let g:deoplete#enable_at_startup = 1
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
