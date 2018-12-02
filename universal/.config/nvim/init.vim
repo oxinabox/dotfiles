@@ -3,11 +3,25 @@ let $BASH_ENV = "~/.bash_aliases"
 filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
+
+
 Plug 'ntpeters/vim-better-whitespace'
+let g:better_whitespace_skip_empty_lines=1
+
+Plug 'tpope/vim-sleuth'
+
 
 "Languages
 Plug 'plasticboy/vim-markdown'
+
 Plug 'JuliaLang/julia-vim'
+let g:default_julia_version = "devel"
+
+au FileType julia set ts=4 sw=4 sts=4 et
+
+
+
+
 
 "Colors
 Plug 'mtglsk/wikipedia.vim'
@@ -24,10 +38,6 @@ call plug#end()
 "Misc Language Plugin Conf
 let g:vim_markdown_folding_disabled=1
 
-
-"Julia
-let g:default_julia_version = "devel"
-au FileType julia set ts=4 sw=4 sts=4 et
 
 	
 "Completions

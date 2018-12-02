@@ -40,6 +40,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 alias LS=ls
 alias vim=nvim 
 
+EDITOR=nvim
+
+
 # Run fish if can
 if type fish > /dev/null; then
     exec fish

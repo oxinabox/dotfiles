@@ -9,8 +9,8 @@
 	username = lyndon.white
 	helper = cache
 
-# [url "git@gitlab.invenia.ca:"]
-#    insteadOf = https://gitlab.invenia.ca/
+[url "git@gitlab.invenia.ca:"]
+    insteadOf = https://gitlab.invenia.ca/
 
-[url "https@gitlab.invenia.ca:"]
-    insteadOf = git@gitlab.invenia.ca
+#[url "https@gitlab.invenia.ca:"]
+#    insteadOf = git@gitlab.invenia.ca
