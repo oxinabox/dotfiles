@@ -1,29 +1,32 @@
-# Setup OhMyREPL and Revise
-import Pkg
-let
-    pkgs = ["Revise", "OhMyREPL"]
-    for pkg in pkgs
-    if Base.find_package(pkg) === nothing
-        Pkg.add(pkg)
-    end
-    end
-end
 
 using OhMyREPL
 
+
 atreplinit() do repl
+    try
+        @eval using Rebugger
+    catch err
+        @warn "Error starting OhMyREPL" exception=err
+    end
+
     try
         @eval using Revise
         @async Revise.wait_steal_repl_backend()
     catch err
         @warn "Error starting Revise" exception=err
     end
+
+    try
+        @eval using Rebugger
+    catch err
+        @warn "Error starting Rebugger" exception=err
+    end
 end
 
 
 #==
 # Update all packages, but do so in a worker process
-import Distributed
+using Distributed: Distributed
 let
     pkg_worker = Distributed.addprocs(1)[end]
     Distributed.remotecall(pkg_worker) do

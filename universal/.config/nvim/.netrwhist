@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/oxinabox/dotfiles/universal/.config/fish/functions'
-let g:netrw_dirhist_2='/Users/oxinabox/Documents/JuliaEnvs/CassetteMocks/dev/Mocking'
-let g:netrw_dirhist_3='/Users/oxinabox/Documents/JuliaEnvs/CassetteMocks/dev/Mocking/src'
-let g:netrw_dirhist_4='/Users/oxinabox/Documents/advent_of_code.jl'
+let g:netrw_dirhist_cnt =0

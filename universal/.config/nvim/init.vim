@@ -13,13 +13,12 @@ Plug 'tpope/vim-sleuth'
 
 "Languages
 Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled=1
+
 
 Plug 'JuliaLang/julia-vim'
 let g:default_julia_version = "devel"
-
 au FileType julia set ts=4 sw=4 sts=4 et
-
-
 
 
 
@@ -29,17 +28,12 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nielsmadan/harlequin'
 
 "Completion
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 call plug#end()
 
-
-"Misc Language Plugin Conf
-let g:vim_markdown_folding_disabled=1
-
-
-	
 "Completions
 let g:deoplete#enable_at_startup = 1
 
@@ -67,7 +61,7 @@ syntax enable
 if localtime()%2==0
 	colorscheme zellner
 elseif localtime()%2==1
-	colorscheme harlequin 
+	colorscheme harlequin
 	highlight Visual term=reverse cterm=reverse ctermbg=Grey
 end
 
