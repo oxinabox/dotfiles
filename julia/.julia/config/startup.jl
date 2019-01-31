@@ -1,25 +1,19 @@
-
-using OhMyREPL
-
+if Base.find_package("OhMyREPL") !== nothing
+    using OhMyREPL
+end
 
 atreplinit() do repl
-    try
-        @eval using Rebugger
-    catch err
-        @warn "Error starting OhMyREPL" exception=err
-    end
-
     try
         @eval using Revise
         @async Revise.wait_steal_repl_backend()
     catch err
-        @warn "Error starting Revise" exception=err
+        println("Error starting Revise $err")
     end
-
+    
     try
         @eval using Rebugger
     catch err
-        @warn "Error starting Rebugger" exception=err
+        println("Error starting Rebugger $err")
     end
 end
 

@@ -31,11 +31,9 @@ Plug 'nielsmadan/harlequin'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
-
-"Completions
-let g:deoplete#enable_at_startup = 1
 
 "Key (re) Bindings
 map <F5> :setlocal spell! spelllang=en_us<CR>
