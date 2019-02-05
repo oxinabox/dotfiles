@@ -1,10 +1,12 @@
+set -x EDITOR nvim
+
+
 # Setup TheFuck
 # https://github.com/nvbn/thefuck/wiki/Shell-aliases
 thefuck --alias | source
 
 # Setup SSH agent, from
 # https://gist.github.com/gerbsen/5fd8aa0fde87ac7a2cae
-
 setenv SSH_ENV $HOME/.ssh/environment
 
 function start_agent

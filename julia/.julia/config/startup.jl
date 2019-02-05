@@ -1,5 +1,5 @@
 if Base.find_package("OhMyREPL") !== nothing
-    using OhMyREPL
+#    using OhMyREPL
 end
 
 atreplinit() do repl
