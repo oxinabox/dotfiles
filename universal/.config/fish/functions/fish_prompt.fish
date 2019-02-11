@@ -36,7 +36,16 @@ function fish_prompt --description 'Write out the prompt'
         set git_info "(git$git_status$git_branch"(set_color white)")"
     end
     set_color -b black
-    printf '%s%s%s%s%s%s%s' (set_color yellow) (echo $PWD | sed -e "s|^$HOME|~|") (set_color white) $git_info (set_color white) '❱' (set_color white)
+
+    ##########################
+    # show PWD
+    set_color yellow
+    set -U fish_prompt_pwd_dir_length 5  # how abbreviated
+    echo -n (prompt_pwd) # abbreviated working directory
+
+    # Show git info
+    printf '%s%s%s%s%s' (set_color white) $git_info (set_color white) '❱' (set_color white)
+    
     if test $laststatus -eq 0
         printf "%s ✔ %s❱%s " (set_color -o green) (set_color white) (set_color normal)
     else
