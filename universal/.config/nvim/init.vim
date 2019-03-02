@@ -8,13 +8,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_skip_empty_lines=1
 
-Plug 'tpope/vim-sleuth'
+" Seems to incorrectly set sw=3 sometimes. need new indenting sleuth
+"Plug 'tpope/vim-sleuth'
 
+Plug 'rhysd/reply.vim'
+
+Plug 'vim-scripts/CmdlineComplete'
 
 "Languages
+Plug 'cespare/vim-toml'
+
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
-
 
 Plug 'JuliaLang/julia-vim'
 let g:default_julia_version = "devel"
