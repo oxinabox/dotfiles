@@ -1,5 +1,6 @@
 set -x EDITOR nvim
 
+set -gx PATH /Users/oxinabox/Library/Python/2.7/bin/ /Users/oxinabox/.julia/bin/ $PATH
 
 # Setup TheFuck
 # https://github.com/nvbn/thefuck/wiki/Shell-aliases
@@ -44,3 +45,5 @@ else
         start_agent
     end
 end
+
+
