@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/oxinabox/JuliaEnvs/PortfolioNets.jl/test/forecaster'
 let g:netrw_dirhist_2='/Users/oxinabox/JuliaEnvs/AxisArrayUtils.jl/dev/LaxZonedDateTimes'
+let g:netrw_dirhist_3='/Users/oxinabox/Documents/InfrastructureRepos/sagemakersubmit/docker/build'
+let g:netrw_dirhist_4='/Users/oxinabox/ChainRules.jl/docs/src/assets'
