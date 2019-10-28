@@ -17,6 +17,8 @@ Plug 'rhysd/conflict-marker.vim'
 
 "Languages
 Plug 'cespare/vim-toml'
+"Plug 'chrisbra/csv.vim'
+
 
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
@@ -34,11 +36,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nielsmadan/harlequin'
 
 
-
 "Completion
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'oxinabox/deoplete-tabnine', { 'do': './install.sh' }
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()

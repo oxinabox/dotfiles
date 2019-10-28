@@ -1,4 +1,4 @@
-if VERSION <= v"1.2"  # Not on master
+if VERSION <= v"1.3"  # Not on master
     atreplinit() do repl
         try
             @eval using Revise
