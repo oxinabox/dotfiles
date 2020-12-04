@@ -14,3 +14,7 @@
 
 #[url "https@gitlab.invenia.ca:"]
 #    insteadOf = git@gitlab.invenia.ca
+[core]
+	excludesfile = /Users/oxinabox/.gitignore_global
+[pull]
+	ff = only

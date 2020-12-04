@@ -41,7 +41,7 @@ alias LS=ls
 alias vim=nvim 
 
 EDITOR=nvim
-
+JULIA_NUM_THREADS=100000
 
 # Run fish if can
 if type fish > /dev/null; then

@@ -17,6 +17,7 @@ Plug 'rhysd/conflict-marker.vim'
 
 "Languages
 Plug 'cespare/vim-toml'
+Plug 'neovimhaskell/haskell-vim'
 "Plug 'chrisbra/csv.vim'
 
 
@@ -26,6 +27,15 @@ let g:vim_markdown_folding_disabled=1
 Plug 'JuliaLang/julia-vim'
 let g:default_julia_version = "devel"
 au FileType julia set ts=4 sw=4 sts=4 et
+
+Plug 'kdheepak/JuliaFormatter.vim'
+let g:JuliaFormatter_options = {
+        \ 'indent'                    : 4,
+        \ 'margin'                    : 92,
+        \ 'always_for_in'             : v:true,
+        \ 'whitespace_typedefs'       : v:false,
+        \ 'whitespace_ops_in_indices' : v:true,
+        \ }
 
 Plug 'ap/vim-css-color'
 au BufNewFile,BufRead *.js,*.html,*.css set ts=2 sts=2 sw=2 et
