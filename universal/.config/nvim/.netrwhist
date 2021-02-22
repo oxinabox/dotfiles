@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/oxinabox/dex_building/round7/dex-lang/src'
+let g:netrw_dirhist_7='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github/workflows'
+let g:netrw_dirhist_6='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github'
+let g:netrw_dirhist_5='/Users/oxinabox/dex_building/round7/dex-lang/examples'
 let g:netrw_dirhist_4='/Users/oxinabox/JuliaEnvs/PSDMats.jl/src'
 let g:netrw_dirhist_3='/Users/oxinabox/JuliaEnvs/julia/base'
 let g:netrw_dirhist_2='/Users/oxinabox/JuliaEnvs/julia/base/strings'
