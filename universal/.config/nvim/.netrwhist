@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/oxinabox/JuliaEnvs/ChainRulesWorld/ChainRulesOverloadGeneration.jl/docs/src/examples'
+let g:netrw_dirhist_9='/Users/oxinabox/Documents/InfrastructureRepos/sagemakersubmit/docker/runtime/example_agents'
 let g:netrw_dirhist_8='/Users/oxinabox/dex_building/round7/dex-lang/src'
 let g:netrw_dirhist_7='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github/workflows'
 let g:netrw_dirhist_6='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github'
