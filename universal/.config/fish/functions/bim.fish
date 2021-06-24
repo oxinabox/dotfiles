@@ -1,4 +1,4 @@
-# Defined in - @ line 0
-function bim --description 'alias bim=vim'
-	vim  $argv;
+# Defined in - @ line 1
+function bim --wraps=nvim --description 'alias bim nvim'
+  nvim  $argv;
 end

@@ -2,10 +2,6 @@ set -x EDITOR nvim
 
 set -gx PATH //Users/oxinabox/Library/Python/3.7/bin/ /Users/oxinabox/Library/Python/3.9/bin/ /Users/oxinabox/.julia/bin/ $PATH
 
-# Setup TheFuck
-# https://github.com/nvbn/thefuck/wiki/Shell-aliases
-thefuck --alias | source
-
 # Setup SSH agent, from
 # https://gist.github.com/gerbsen/5fd8aa0fde87ac7a2cae
 setenv SSH_ENV $HOME/.ssh/environment
@@ -45,9 +41,4 @@ else
         start_agent
     end
 end
-
-##################################################
-
-# jEnv
-status --is-interactive; and source (jenv init -|psub)
 

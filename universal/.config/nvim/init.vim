@@ -73,7 +73,7 @@ command! -bang -range -nargs=1 -complete=file ExtractToFile  <line1>,<line2>writ
 
 "Interfacing
 set mouse=a
-
+set clipboard=unnamedplus
 
 "Appearence
 syntax enable

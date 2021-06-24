@@ -1,4 +1,4 @@
-# Defined in - @ line 0
-function cim --description 'alias cim=vim'
-	vim  $argv;
+# Defined in - @ line 1
+function cim --wraps=nvim --description 'alias cim nvim'
+  nvim  $argv;
 end

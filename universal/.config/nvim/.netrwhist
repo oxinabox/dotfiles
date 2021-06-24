@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/oxinabox/.local/share/applications'
+let g:netrw_dirhist_6='/home/oxinabox/scripts'
+let g:netrw_dirhist_5='/home/oxinabox/dotfiles/universal/.config/fish/functions'
 let g:netrw_dirhist_4='/home/oxinabox'
 let g:netrw_dirhist_3='/home/oxinabox/.vim'
 let g:netrw_dirhist_2='/home/oxinabox/.vim/bundle'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_1='/home/oxinabox/.vim'
 let g:netrw_dirhist_0='/Users/oxinabox/JuliaEnvs/ChainRulesWorld/ChainRulesOverloadGeneration.jl/docs/src/examples'
 let g:netrw_dirhist_9='/Users/oxinabox/Documents/InfrastructureRepos/sagemakersubmit/docker/runtime/example_agents'
 let g:netrw_dirhist_8='/Users/oxinabox/dex_building/round7/dex-lang/src'
-let g:netrw_dirhist_7='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github/workflows'
-let g:netrw_dirhist_6='/Users/oxinabox/JuliaEnvs/LayeredLayouts_Env/LayeredLayouts/.github'
-let g:netrw_dirhist_5='/Users/oxinabox/dex_building/round7/dex-lang/examples'
