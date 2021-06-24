@@ -1,0 +1,8 @@
+julia/.julia/artifacts/
+julia/.julia/clones/
+julia/.julia/compiled/
+julia/.julia/environments/
+julia/.julia/logs/
+julia/.julia/packages/
+julia/.julia/registries/
+julia/.julia/scratchspaces/
