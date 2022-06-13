@@ -1,6 +1,6 @@
 set -x EDITOR nvim
 
-set -gx PATH //Users/oxinabox/Library/Python/3.7/bin/ /Users/oxinabox/Library/Python/3.9/bin/ /Users/oxinabox/.julia/bin/ $PATH
+set -gx PATH //Users/oxinabox/Library/Python/3.7/bin/ /Users/oxinabox/Library/Python/3.9/bin/ /Users/oxinabox/.julia/bin/ /home/oxinabox/.local/bin/ $PATH
 
 # Setup SSH agent, from
 # https://gist.github.com/gerbsen/5fd8aa0fde87ac7a2cae

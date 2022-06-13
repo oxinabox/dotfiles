@@ -5,4 +5,10 @@ julia/.julia/environments/
 julia/.julia/logs/
 julia/.julia/packages/
 julia/.julia/registries/
+julia/.julia/old_registries/
+julia/.julia/conda/
 julia/.julia/scratchspaces/
+julia/.julia/pluto_notebooks/
+julia/.julia/dev/
+julia/.julia/datadeps
+

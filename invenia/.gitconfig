@@ -1,5 +1,5 @@
 [user]
-	email = oxinabox@ucc.asn.au
+	email = lyndon.white@invenialabs.co.uk
 	name = Lyndon White
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -15,7 +15,7 @@
 #[url "https@gitlab.invenia.ca:"]
 #    insteadOf = git@gitlab.invenia.ca
 [core]
-	excludesfile = /Users/oxinabox/.gitignore_global
+	excludesfile = /home/oxinabox/.gitignore
 [pull]
 	ff = only
 [filter "lfs"]
@@ -25,3 +25,5 @@
 	process = git-lfs filter-process
 [credential]
 	helper = cache
+[init]
+	defaultBranch = main

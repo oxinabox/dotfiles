@@ -36,7 +36,13 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 ##############
+# GUI stuff
 
+# disable mouse side buttons
+xmodmap -e "pointer = 1 2 3 4 5 6 7 0 0 0" 
+
+
+################################
 alias LS=ls
 alias vim=nvim 
 

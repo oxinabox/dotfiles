@@ -8,11 +8,8 @@ if isdefined(Pkg.Resolve, :CONFLICT_COLORS)
 end
 
 # Setup Revise.jl
-atreplinit() do repl
-    try
-        @eval using Revise
-        @async Revise.wait_steal_repl_backend()
-    catch err
-        println("Error starting Revise $err")
-    end
+try
+    using Revise
+catch e
+    @warn "Error initializing Revise" exception=(e, catch_backtrace())
 end
