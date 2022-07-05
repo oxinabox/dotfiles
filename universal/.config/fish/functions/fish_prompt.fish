@@ -1,54 +1,12 @@
-function fish_prompt --description 'Write out the prompt'
-	set laststatus $status
-    function _git_branch_name
-        echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-    end
-    function _is_git_dirty
-        echo (git status -s --ignore-submodules=dirty ^/dev/null)
-    end
-    if [ (_git_branch_name) ]
-        set -l git_branch (set_color -o blue)(_git_branch_name)
-        if [ (_is_git_dirty) ]
-            for i in (git branch -qv --no-color | string match -r '\*' | cut -d' ' -f4- | cut -d] -f1 | tr , \n)\
- (git status --porcelain | cut -c 1-2 | uniq)
-                switch $i
-                    case "*[ahead *"
-                        set git_status "$git_status"(set_color red)⬆
-                    case "*behind *"
-                        set git_status "$git_status"(set_color red)⬇
-                    case "."
-                        set git_status "$git_status"(set_color green)✚
-                    case " D"
-                        set git_status "$git_status"(set_color red)✖
-                    case "*M*"
-                        set git_status "$git_status"(set_color green)✱
-                    case "*R*"
-                        set git_status "$git_status"(set_color purple)➜
-                    case "*U*"
-                        set git_status "$git_status"(set_color brown)═
-                    case "??"
-                        set git_status "$git_status"(set_color red)≠
-                end
-            end
-        else
-            set git_status (set_color green):
-        end
-        set git_info "(git$git_status$git_branch"(set_color white)")"
-    end
-    set_color -b black
+# a called to `_pure_prompt_new_line` is triggered by an event
+function fish_prompt
+    set --local exit_code $status  # save previous exit code
 
-    ##########################
-    # show PWD
-    set_color yellow
-    set -U fish_prompt_pwd_dir_length 5  # how abbreviated
-    echo -n (prompt_pwd) # abbreviated working directory
+    echo -e -n (_pure_prompt_beginning)  # init prompt context (clear current line, etc.)
+    _pure_print_prompt_rows # manage default vs. compact prompt
+    _pure_place_iterm2_prompt_mark # place iTerm shell integration mark
+    echo -e -n (_pure_prompt $exit_code)  # print prompt
+    echo -e (_pure_prompt_ending)  # reset colors and end prompt
 
-    # Show git info
-    printf '%s%s%s%s%s' (set_color white) $git_info (set_color white) '❱' (set_color white)
-    
-    if test $laststatus -eq 0
-        printf "%s ✔ %s❱%s " (set_color -o green) (set_color white) (set_color normal)
-    else
-        printf "%s ✘ %s❱%s " (set_color -o red) (set_color white) (set_color normal)
-    end
+    set _pure_fresh_session false
 end
