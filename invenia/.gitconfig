@@ -1,6 +1,6 @@
 [user]
-	email = lyndon.white@invenialabs.co.uk
-	name = Lyndon White
+	email = frames.white@invenialabs.co.uk
+	name = Frames White
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
@@ -27,3 +27,5 @@
 	helper = cache
 [init]
 	defaultBranch = main
+[safe]
+	directory = /usr/local/src/julia/julia-master
