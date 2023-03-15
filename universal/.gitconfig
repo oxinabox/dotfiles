@@ -1,0 +1,13 @@
+[user]
+	email = me@oxinabox.net
+	name = Frames White
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+
+[core]
+	excludesfile = /home/oxinabox/.gitignore
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
