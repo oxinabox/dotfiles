@@ -3,6 +3,8 @@ sudo apt-get install git cmake build-essential
 sudo apt-get install notepadqq
 sudo apt-get install trash-cli stow
 
+
+
 # Now we setup our dotfiles
 cd ~/dotfiles
 stow universal
@@ -10,6 +12,9 @@ stow universal
 # setup ohmyfish (or we get errors when we go to use new dot files
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
+# setup tldr
+sudo apt-get install tldr
+tldr -u
 
 # setup the fuck
 sudo apt install python3-dev python3-pip python3-setuptools

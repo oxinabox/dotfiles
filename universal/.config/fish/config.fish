@@ -40,3 +40,4 @@ else
         start_agent
     end
 end
+thefuck --alias | source

@@ -1,4 +1,3 @@
+local_scratch/**
 .vscode/**
-**/scratch.jl
-**/scratch/**
 dev/**
