@@ -49,7 +49,7 @@ Plug 'nielsmadan/harlequin'
 "Completion
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'oxinabox/deoplete-tabnine', { 'do': './install.sh' }
+"Plug 'oxinabox/deoplete-tabnine', { 'do': './install.sh' }
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()
