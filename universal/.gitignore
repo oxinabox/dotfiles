@@ -1,4 +1,6 @@
 local_scratch/**
+local_scratch
+local_scratch/
 .vscode/**
 dev/**
 LocalPreferences.toml

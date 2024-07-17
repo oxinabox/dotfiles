@@ -8,9 +8,20 @@
 [core]
 	excludesFile = ~/.gitignore
 [pull]
-	ff = only
-	rebase = true
+#	ff = only
+#	rebase = true
 [init]
 	defaultBranch = main
 [github]
 	user = oxinabox
+
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[rerere]
+	enabled = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
