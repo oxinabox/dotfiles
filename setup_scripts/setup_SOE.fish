@@ -1,4 +1,4 @@
-sudo apt-get install tmux htop silversearcher-ag tldr
+sudo apt-get install tmux htop silversearcher-ag
 sudo apt-get install git cmake build-essential 
 sudo apt-get install notepadqq
 sudo apt-get install trash-cli stow
@@ -13,15 +13,15 @@ stow universal
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 # setup tldr
-sudo apt-get install tldr
+sudo apt-get install tealdeer
 tldr -u
 
 # setup the fuck
-sudo apt install python3-dev python3-pip python3-setuptools
-pip3 install thefuck --user
-fish_add_path ~/.local/bin
+#sudo apt install python3-dev python3-pip python3-setuptools
+#pip3 install thefuck --user
+#fish_add_path ~/.local/bin
 # alias --save please=fuck  # not needed if dotfiles are loaded
-please
+##please
 #Won't work til you start  new shell
 
 # Setup neovim
