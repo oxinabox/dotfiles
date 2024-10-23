@@ -49,11 +49,10 @@ alias vim=nvim
 EDITOR=nvim
 JULIA_NUM_THREADS=100000
 
+
+export PATH="/home/frames/.pixi/bin:$PATH"
+
 # Run fish if can
 if type fish > /dev/null; then
     exec fish
 fi
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
