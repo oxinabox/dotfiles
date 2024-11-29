@@ -1,5 +1,6 @@
 
 set -x EDITOR nvim
+ulimit -S -n 65536
 
 # Setup SSH agent, from
 # https://gist.github.com/gerbsen/5fd8aa0fde87ac7a2cae
