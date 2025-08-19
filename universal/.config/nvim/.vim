@@ -1,1 +1,0 @@
-/home/oxinabox/.vim

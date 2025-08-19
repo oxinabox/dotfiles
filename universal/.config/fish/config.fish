@@ -42,3 +42,4 @@ else
     end
 end
 
+fish_add_path /home/frames/.pixi/bin

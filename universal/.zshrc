@@ -52,7 +52,12 @@ JULIA_NUM_THREADS=100000
 
 export PATH="/home/frames/.pixi/bin:$PATH"
 
-# Run fish if can
-if type fish > /dev/null; then
-    exec fish
-fi
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/frames/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
