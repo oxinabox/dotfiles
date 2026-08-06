@@ -59,5 +59,7 @@ export PATH="/home/frames/.pixi/bin:$PATH"
 
 path=('/home/frames/.juliaup/bin' $path)
 export PATH
+# Tab completion for juliaup and julia channel selection
+[ -f "/home/frames/.julia/juliaup/completions/zsh.zsh" ] && source "/home/frames/.julia/juliaup/completions/zsh.zsh"
 
 # <<< juliaup initialize <<<
